@@ -1,0 +1,204 @@
+/*=header*/
+.image_logo {
+	background-repeat: none;
+	height: 70px;
+	background-size: auto 100%;
+	background-repeat: none;
+	background-position: center center;
+}
+
+.main-navigation {
+	position: fixed;
+	z-index: 999;
+	text-decoration: none;
+	font-weight: 200;
+	background-color: $color_header_1;
+	width: 100%;
+}
+
+.main-navigation ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.main-navigation ul:before,.main-navigation ul:after {
+    content:"";
+    display:table;
+}
+
+.main-navigation ul:after {
+    clear:both;
+}
+
+.main-navigation ul > li {
+    float:left;
+    position:relative;
+}
+
+.main-navigation a {
+	height: 70px;	/* this must agree to two classes below*/
+	font-size: 18px;
+    display:block;
+    padding: 22px 12px;
+    line-height:1.2em;
+    color:$color_text_2;
+    text-decoration: none;
+}
+
+.main-navigation a:hover {
+    text-decoration:none;
+    background-color: $color_logo_2;
+     -webkit-transition: all 250ms ease-in;
+    -moz-transition: all 250ms ease-in;
+    -o-transition: all 250ms ease-in;
+    transition: all 250ms ease-in;
+}
+
+.main-navigation li ul {
+    background-color: $color_header_1;
+}
+
+.main-navigation li ul li {
+    width:220px;
+}
+
+.main-navigation li ul a {
+	padding: 8px 12px;
+	font-size: 16px;
+}
+
+.main-navigation li ul a:hover {
+    background: $color_logo_2;
+}
+
+.main-navigation li ul {
+    position: absolute;
+    left:0;
+    top:70px;	/* make sure this agrees to "main-navigation a" height*/
+    z-index:1;
+}
+.main-navigation li ul li {
+    overflow:hidden;
+    height:0;
+    -webkit-transition:height 250ms ease-in;
+    -moz-transition:height 250ms ease-in;
+    -o-transition:height 250ms ease-in;
+    transition:height 250ms ease-in;
+}
+.main-navigation ul > li:hover ul li {
+    height:36px;
+}
+
+.content-area {
+	margin-top: 70px;	/* make sure this agrees to "main-navigation a" height*/
+}
+
+@media screen and (max-width: 840px) {
+
+	.main-navigation {
+		display: none;
+	}
+    .content-area {
+        margin-top: 54px;
+    }
+}
+
+/*=footer*/
+.footer {
+    width: 100%;
+    margin: 0;
+    padding: 2em 0 0 0;
+    background-color: $color_header_1;
+    border-top: 4px solid $color_logo_2;
+    color: $color_text_2;
+    p {
+        color: $color_bg_3;
+        font-size: 14px;
+        padding: 0;
+        margin: .2em;
+    }
+    a {
+        color: $color_bg_3;
+        display: block;
+        
+        &:hover {
+             color: $color_bg_1;
+            -webkit-transition: all 250ms ease-in;
+            -moz-transition: all 250ms ease-in;
+            -o-transition: all 250ms ease-in;
+            transition: all 250ms ease-in;
+        }
+    }
+    a p {
+        text-decoration: none;
+        &:hover {
+            color: $color_bg_1;
+            -webkit-transition: all 250ms ease-in;
+            -moz-transition: all 250ms ease-in;
+            -o-transition: all 250ms ease-in;
+            transition: all 250ms ease-in;
+        }
+    }
+    .fa-stack-2x {
+        color: $color_bg_3;
+    }
+    .fa-stack-1x {
+        color: $color_text_2;
+    }
+    .fa-facebook:hover {
+            color: #3b5998;
+            -webkit-transition: all 250ms ease-in;
+            -moz-transition: all 250ms ease-in;
+            -o-transition: all 250ms ease-in;
+            transition: all 250ms ease-in;
+        }
+    .fa-twitter:hover {
+            color: #00aced;
+            -webkit-transition: all 250ms ease-in;
+            -moz-transition: all 250ms ease-in;
+            -o-transition: all 250ms ease-in;
+            transition: all 250ms ease-in;
+        }
+    .fa-linkedin:hover {
+            color: #007bb6;
+            -webkit-transition: all 250ms ease-in;
+            -moz-transition: all 250ms ease-in;
+            -o-transition: all 250ms ease-in;
+            transition: all 250ms ease-in;
+        }
+    .fa-youtube:hover {
+            color: #bb0000;
+            -webkit-transition: all 250ms ease-in;
+            -moz-transition: all 250ms ease-in;
+            -o-transition: all 250ms ease-in;
+            transition: all 250ms ease-in;
+        }
+    hr {
+        margin: .8em 0 .4em 0;
+        background-color: $color_bg_2;
+    }
+}
+
+.footer_wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    .col-sm-6 {
+        margin: 1.5em auto;
+    }
+}
+
+.footer_bottom {
+    width: 100%;
+    padding: .5em 0;
+    margin: 0;
+    background-color: $color_bg_3;
+    p {
+        color: $color_text_1;
+    }
+}
+
+
+
+
