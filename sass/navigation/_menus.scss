@@ -1,3 +1,5 @@
+@import "variables-site/variables-site";
+
 /*=header*/
 .image_logo {
 	background-repeat: none;
@@ -20,6 +22,8 @@
     list-style:none;
     margin:0;
     padding:0;
+    position: absolute;
+    right: 20px;
 }
 
 .main-navigation ul:before,.main-navigation ul:after {
@@ -42,13 +46,15 @@
     display:block;
     padding: 22px 12px;
     line-height:1.2em;
-    color:$color_text_2;
+    color:$color_text_1;
+    font-weight: 100;
+    font-family: $font_bold;
     text-decoration: none;
 }
 
 .main-navigation a:hover {
     text-decoration:none;
-    background-color: $color_logo_2;
+    background-color: $color_logo_1;
      -webkit-transition: all 250ms ease-in;
     -moz-transition: all 250ms ease-in;
     -o-transition: all 250ms ease-in;
@@ -69,7 +75,7 @@
 }
 
 .main-navigation li ul a:hover {
-    background: $color_logo_2;
+    background: $color_logo_1;
 }
 
 .main-navigation li ul {
@@ -91,7 +97,7 @@
 }
 
 .content-area {
-	margin-top: 70px;	/* make sure this agrees to "main-navigation a" height*/
+	margin-top: 0;	/* make sure this agrees to "main-navigation a" height but only if you want it not to cover the image*/
 }
 
 @media screen and (max-width: 840px) {

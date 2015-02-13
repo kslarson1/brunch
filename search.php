@@ -13,11 +13,16 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'brunch' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h2 class="page-title"><?php printf( __( 'Search Results for: %s', 'brunch' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
+
+<div class="container">
+<div class="brunch_post">
+	<div class="row">
+		<div class="col-xs-12 col-sm-8">
 
 				<?php
 				/**
@@ -27,6 +32,14 @@ get_header(); ?>
 				 */
 				get_template_part( 'content', 'search' );
 				?>
+
+		</div>
+	<div class="col-xs-12 col-sm-4">
+		<?php get_sidebar(); ?>
+	</div>
+	</div>
+</div>
+</div>
 
 			<?php endwhile; ?>
 
@@ -41,5 +54,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

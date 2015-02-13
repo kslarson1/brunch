@@ -160,6 +160,34 @@ function create_post_type() {
             'taxonomies' => array( 'category' ),
             'public' => true,
             'has_archive' => true,
+            'publicly_queryable' => true,
         )
     );
+}
+
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'nav_menu_item', 'brunch_review'
+		));
+	  return $query;
+	}
+}
+
+// Define what post types to search so custom post will show up in search
+function searchAll( $query ) {
+	if ( $query->is_search ) {
+		$query->set( 'post_type', array( 'post', 'page', 'feed', 'brunch_review'));
+	}
+	return $query;
+}
+
+// The hook needed to search ALL content and add custom post to recent widget
+add_filter( 'the_search_query', 'searchAll' );
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
+add_filter('widget_posts_args', 'widget_posts_args_add_custom_type'); 
+function widget_posts_args_add_custom_type($params) {
+	$params['post_type'] = array('post', 'brunch_review');
+	return $params;
 }

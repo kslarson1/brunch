@@ -1,5 +1,6 @@
 a {
-	color: $color__link;
+	text-decoration: none;
+	color: $color_text_1;
 
 	&:visited {
 		color: $color__link-visited;
@@ -7,6 +8,10 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		-webkit-transition: all .5s;
+  		-moz-transition: all .5s;
+  		-ms-transition: all .5s;
+  		-o-transition: all .5s;
+  		transition: all .5s;   
 	}
 }

@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * The template for displaying all single posts.
  *
  * @package Brunch
  */
@@ -12,10 +10,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
 
 <div class="container">
 <div class="brunch_post">
@@ -29,21 +25,15 @@ get_header(); ?>
 		<div class="col-xs-12 col-xs-4">
 			<?php get_sidebar(); ?>
 		</div>
-	</div>	
+			
+	</div>
 </div>
 </div>
 
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
+		<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
 
 <?php get_footer(); ?>

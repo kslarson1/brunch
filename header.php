@@ -9,7 +9,7 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic' rel='stylesheet' type='text/css'>  <!-- google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700|Roboto:400,300,100' rel='stylesheet' type='text/css'>  <!-- google fonts -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">  <!-- font awesome -->
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,10 +34,8 @@
 		</div>
 	<div class="col-xs-10">
 <ul id="menu">
-	<li><a href="/home">Home</a></li>
-    <li><a href="#about">About Us</a></li>
-    <li><a href="#contact">Contact Us</a></li>
-    <li><a href="/blog">Blog</a></li>
+	<li><a href="/brunch">Home</a></li>
+    <li><a href="/brunch/brunch_review">Most Recent Brunches</a></li>
 </ul>
 </div>
 </div>

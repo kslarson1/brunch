@@ -1,10 +1,29 @@
 #home {
 	width: 100%;
-	background-color: #000;
+	background-color: $color_bg_1;
 	min-height: 700px;
-	color: $color_text_2;
 	h1 {
+		padding-top: 2em;
 		font-size: 5em;
+		color: $color_text_1;
+		font-family: $font_bold;
+	}
+	h5 {
+		color: $color_logo_1;
+		font-weight: 200;
+	}
+	i {
+		padding-left: 3em;
+		padding-top: 1em;
+	}
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 3.2em;
+			padding-top: 1em;
+		}
+		h5 {
+			padding-top: 1em;
+		}
 	}
 }
 
@@ -14,44 +33,58 @@
 
 .break {
 	width: 100%;
-	height: 250px;
+	height: 350px;
 	text-align: center;
 	background-color: $color_bg_2;
-	padding: 4.5em;
+	padding: 7em 0;
+	color: $color_logo_1;
+	h1 {
+		font-weight: 200;
+	}
+	hr {
+		background-color: $color_bg_3;
+		max-width: 400px;
+	}
 }
 
 .break2 {
 	width: 100%;
 	height: 400px;
 	text-align: center;
-	background-color: $color_bg_1;
-	padding: 3em;
+	background-color: $color_logo_4;
+	padding: 8.5em 0;
+}
+
+.fixed_bg_home {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  min-height: 700px;
 }
 
 /**BLOG AREA*/
 .blog_area {
-  background-color: $color_button_3;
-  padding: 2em 0 0 0;
-  h2 {
-    font-weight: 300;
-  }
+  background-color: $color_bg_1;
+  padding: 0;
   p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0 .5em;
-    font-weight: 300;
+    padding: .5em;
   }
   a {
   text-decoration: none;
   color: $color_text_1;
   font-family: $font_text;
-  font-weight: 300;
+  font-weight: 100;
   }
-  h4 {
+  h3 {
   	color: #fff;
+  	font-weight: 200;
+  	text-align: center;
   }
-  h4:hover {
+  h3:hover {
   	color: $color_logo_1;
   	-webkit-transition: all .5s;
 	-moz-transition: all .5s;
@@ -119,6 +152,8 @@
     text-align: center;
     padding: 0 3em;
     color: #fff;
+    margin: 0;
+    padding-top: 8px;
   }
 }
 
@@ -145,15 +180,47 @@
   bottom: 0px;
 }
 
-.travel_blog_post {
+.brunch_blog_post {
   width: 100%;
   height: 380px;
 }
 
 /*about area*/
 #about {
+	padding-top: 8em;
+	h1 {
+		font-family: $font_bold;
+	}
 }
 
-.image_big {
-	max-width: 500px;
+/*single post*/
+.brunch_post {
+	padding: 8em 0 3em 0;
 }
+
+.post_header {
+	margin: 1em 0;
+	text-align: center;
+	border-top: 2px solid $color_logo_1;
+	border-bottom: 2px solid $color_logo_1;
+	h1 {
+		font-family: $font_bold;
+	}
+}
+
+.gold {
+	color: $color_logo_1;
+}
+.gray {
+	color: $color_bg_2;
+}
+
+.site-footer {
+	background-color: $color_bg_4;
+	padding-top: 1em;
+	text-align: center;
+	color: $color_logo_1;
+	font-weight: 200;
+}
+
+

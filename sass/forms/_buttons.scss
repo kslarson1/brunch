@@ -31,14 +31,14 @@
 	display: block;
 	width: 80%;
 	height: 50px;
-	font-weight: 300;
+	font-weight: 400;
 	margin: .5em auto;
 	padding: 8px;
 	text-align: center;
 	color: $color_logo_2;
 	background-color: $color_button_1;
 	font-size: 1.3em;
-	border: 2px solid $color_logo_2;
+	border: 2px solid $color_logo_1;
 }
 
 
@@ -46,7 +46,7 @@
 .button_ghost_wide:active {
 	font-weight: 100;
 	text-decoration: none;
-	background-color: $color_logo_2;
+	background-color: $color_logo_1;
 	color: $color_button_4;
 	-webkit-transition: all .3s;
 	-moz-transition: all .3s;

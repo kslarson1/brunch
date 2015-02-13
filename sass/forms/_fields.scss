@@ -33,12 +33,15 @@ textarea {
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 textarea {
-	font-size: 1.3em;
-    background-color: $color_bg_2;
+	font-size: 1.2em;
+	font-weight: 100;
+    background-color: $color_bg_3;
     border: none;
     width: 100%;
-    color: $color_text_1;
+    color: $color_text_2;
     border-radius: 4px;
 }
-
+.wpcf7 .button_ghost_wide {
+    margin-top: .5em;
+    }
 

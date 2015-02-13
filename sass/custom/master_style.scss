@@ -1,9 +1,11 @@
 /*TYPOGRAPHY*/
 $font_header: Roboto, sans-serif;;	/* Google Fonts */
 $font_text: Roboto, sans-serif;	/* Google Fonts */
+$font_bold: Playfair Display SC, serif; /* Google Fonts*/
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: $font_header;
+	font-weight: 200;
 }
 
 p,

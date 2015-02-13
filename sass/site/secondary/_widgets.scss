@@ -1,5 +1,21 @@
 .widget {
 	margin: 0 0 1.5em;
+	ul {
+		list-style: none;
+	}
+	a {
+
+	&:hover,
+	&:focus,
+	&:active {
+	color: $color_logo_4;
+	-webkit-transition: all .5s;
+  	-moz-transition: all .5s;
+  	-ms-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;   
+	}	
+	}
 
 	/* Make sure select elements fit in widgets */
 	select {

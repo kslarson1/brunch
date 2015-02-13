@@ -29,7 +29,7 @@ get_header(); ?>
 		<div class="col-xs-12 col-xs-4">
 			<?php get_sidebar(); ?>
 		</div>
-	</div>	
+	</div>
 </div>
 </div>
 

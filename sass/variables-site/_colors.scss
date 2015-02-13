@@ -8,10 +8,6 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-$color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
@@ -21,21 +17,28 @@ $color__border-abbr: #666;
 
 
 /*COLORS */
-$color_logo_1: #fff;  /* Black */
-$color_logo_2: #000;  /* Black */
-$color_logo_3: #333;  /* Black */
+$color_logo_1: #a37c40;  /* gold */
+$color_logo_2: #365730;  /* dark green */
+$color_logo_3: #53b66d;  /* medium green */
+$color_logo_4: #984447;  /* dark red */
 
-$color_text_1: #000;	/* Black */
+$color_text_1: #282b28;	/* dark gray */
 $color_text_2: #fff;  /* white */
 
-$color_bg_1: #fff;	/* White */
-$color_bg_2: #333;   /* Dark Gray/Black */
-$color_bg_3: #333;   /* Dark Gray/Black */
-$color_bg_4: #333;   /* Dark Gray/Black */
+$color_bg_1: #f4f4f4;	/* gray */
+$color_bg_2: #d3d3d3;   /* Dark Gray/Black */
+$color_bg_3: #7a7a7a;   /* /medium gray */
+$color_bg_4: #303030;   /* Dark Gray/Black */
 
 $color_button_1: rgba(255,255,255,.6);	/* White-transparent */
 $color_button_2: #000;					/* Black */
 $color_button_3: rgba(184,115,51,1);	/* Copper */
 $color_button_4: #fff;					/* White */
 
-$color_header_1: rgba (30,30,30,.8);
+$color_header_1: rgba(244,244,244,.8);
+
+
+$color__link: $color_text_1;
+$color__link-visited: $color_text_1;
+$color__link-hover: $color_logo_1;
+$color__text-main: #404040;

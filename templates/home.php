@@ -21,7 +21,10 @@ get_header(); ?>
 		<div class="row">
 		  <div class="col-xs-12">
 			<h1>Brunch Billionaires</h1>
-			<p>We're the best</p>
+			<h5>The best brunchers in Denver. Check out our reviews and join the club.</h5>
+			<br>
+			<br>
+				<i class="fa fa-3x fa-chevron-down"></i>
 		  </div>
 		</div>
 	</div>
@@ -31,7 +34,9 @@ get_header(); ?>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1>Latest Brunches</h1>
+				<hr>
+					<h1>Latest Brunches</h1>
+				<hr>
 			</div>
 		</div>
 	</div>
@@ -56,9 +61,9 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <!-- LOOP CONTENT BEGINS-->
   <div class="custom_column_third">
   <a href="<?php echo get_permalink(); ?>">
-  <div class="travel_blog_post" style="background-image: url(<?php the_field('small_display_image'); ?>);">
+  <div class="brunch_blog_post" style="background-image: url(<?php the_field('small_display_image'); ?>);">
     <div class="black_background_top">
-      <h4><?php the_title(); ?></h4>
+      <h3><?php the_title(); ?></h3>
     </div>
     <div class="black_background bottom">
       <p><?php the_field('small_display_teaser'); ?></p>
@@ -70,7 +75,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <?php endwhile; ?>
 <!-- END OF CUSTOM POST FOR BLOG -->
 <!-- END OF BLOG AREA -->
-  </div>  <!-- END OF ROW -->
+ 	</div>  <!-- END OF ROW -->
 </div> <!-- END OF CONTAINER -->
 </div>  <!-- END OF blog_area -->
 <!-- end of =blogroll -->
@@ -79,21 +84,23 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	<container>
 		<div class="row">
 			<div class="col-xs-12">
-				<h3>quote about stuff</h3>
+				<h1>"Let's brunch, bitches."</h1>
+				<p>-Eleanor Roosevelt</p>
 			</div>
 		</div>
 	</container>
 </div>
 
 <div id="about">
+<div class="fixed_bg_home" style="background-image: url(<?php the_field('about_us_image'); ?>);">
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 center">
 			<h1>The Billionaires</h1>
-			  <img class="image_big" src="<?php the_field('about_image'); ?>">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequatur cum veniam maxime ratione laudantium est quam in! Accusamus earum ex et deserunt beatae reiciendis. Nobis, sunt vero odio dicta!</p>
+			<p><?php the_field('about_text'); ?></p>
 		</div>
 	</div>
+</div>
 </div>
 </div>
 
