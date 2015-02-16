@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home
+ * Template Name: Home Page
  *
  * 
  *
@@ -59,15 +59,15 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 
   <!-- LOOP CONTENT BEGINS-->
-  <div class="custom_column_third">
+  <div class="custom_column_whole">
   <a href="<?php echo get_permalink(); ?>">
   <div class="brunch_blog_post" style="background-image: url(<?php the_field('small_display_image'); ?>);">
     <div class="black_background_top">
-      <h3><?php the_title(); ?></h3>
+      <h1><?php the_title(); ?></h1>
     </div>
-    <div class="black_background bottom">
-      <p><?php the_field('small_display_teaser'); ?></p>
-    </div>
+  </div>
+  <div class="black_background bottom">
+      <h3><?php the_field('small_display_teaser'); ?></h3>
   </div>
   </a>
   </div>
@@ -81,34 +81,34 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <!-- end of =blogroll -->
 
 <div class="break2">
-	<container>
+	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1>"Let's brunch, bitches."</h1>
-				<p>-Eleanor Roosevelt</p>
+				<h1><?php the_field('quote', 8); ?></h1>
+				<p>-<?php the_field('quoter', 8); ?></p>
 			</div>
 		</div>
-	</container>
+	</div>
 </div>
 
 <div id="about">
-<div class="fixed_bg_home" style="background-image: url(<?php the_field('about_us_image'); ?>);">
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 center">
-			<h1>The Billionaires</h1>
-			<p><?php the_field('about_text'); ?></p>
+			<p><?php the_field('about_text', 8); ?></p>
 		</div>
 	</div>
 </div>
 </div>
-</div>
 
-<div id="contact">
+<div id="contact" style="background-image: url(<?php the_field('about_bg_image', 8); ?>)">
 <div class="container">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-sm-offset-3">
-			<?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
+		<div class="col-xs-12">
+			<div class="contact_box center">
+				<h3>Wanna join us or give us free brunch? Let's chat.</h3>
+				<?php echo do_shortcode('[contact-form-7 id="40" title="Contact Form"]'); ?>
+			</div>
 		</div>
 	</div>
 </div>

@@ -157,10 +157,11 @@ function create_post_type() {
                 'name' => __( 'Brunch Reviews' ),
                 'singular_name' => __( 'Brunch Review' )
             ),
-            'taxonomies' => array( 'category' ),
+            'taxonomies' => array( 'category', 'post_tag' ),
             'public' => true,
             'has_archive' => true,
             'publicly_queryable' => true,
+            'supports' => array( 'comments', 'title', 'editor', 'author')
         )
     );
 }

@@ -64,6 +64,19 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'brunch' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+<!-- adjust and add comments -->
+		<?php
+		$comments_args = array(
+        // change the title of the reply section
+        'title_reply'=>'Write a Reply or Comment',
+         // change the title of the reply section
+        'comment_form_url'=>'',
+        // remove "Text or HTML to be displayed after the set of comment fields"
+        'comment_notes_after' => '',
+); ?>
+
+
+	<?php comment_form($comments_args); ?>
+	<!-- end of comments -->
 
 </div><!-- #comments -->

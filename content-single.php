@@ -1,30 +1,15 @@
 <?php
 /**
- * The template for displaying all single posts.
- *
  * @package Brunch
  */
+?>
 
-get_header(); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-
-
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12 col-sm-8">
-		<div class="post_header">
-		<a href="<?php echo get_permalink(); ?>">
-        	<h1><?php the_title(); ?></h1>
-        </a>
-      	</div>
-
-
-<!-- start of ratings -->
+	<div class="entry-content">
+	
+	<!-- start of ratings -->
 	<div class="row">
 		<div class="col-xs-12 center">
 			
@@ -66,20 +51,15 @@ endif;
 	</div>
 	<br>
 <!-- end of ratings -->
-      	
-			<?php get_template_part( 'content', 'single' ); ?>
-		</div>
-		<div class="col-xs-12 col-xs-4">
-			<?php get_sidebar(); ?>
-		</div>
-			
-	</div>
-</div>
 
-		<?php endwhile; // end of the loop. ?>
+		<?php the_content(); ?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'brunch' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-
-<?php get_footer(); ?>
+	
+</article><!-- #post-## -->

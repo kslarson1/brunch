@@ -38,6 +38,8 @@
 .main-navigation ul > li {
     float:left;
     position:relative;
+    width: 160px;
+    text-align: center;
 }
 
 .main-navigation a {
@@ -47,14 +49,14 @@
     padding: 22px 12px;
     line-height:1.2em;
     color:$color_text_1;
-    font-weight: 100;
-    font-family: $font_bold;
+    font-weight: 300;
     text-decoration: none;
 }
 
 .main-navigation a:hover {
     text-decoration:none;
-    background-color: $color_logo_1;
+    background-color: $color_logo_3;
+    color: $color_text_2;
      -webkit-transition: all 250ms ease-in;
     -moz-transition: all 250ms ease-in;
     -o-transition: all 250ms ease-in;
@@ -75,7 +77,7 @@
 }
 
 .main-navigation li ul a:hover {
-    background: $color_logo_1;
+    background: $color_logo_3;
 }
 
 .main-navigation li ul {

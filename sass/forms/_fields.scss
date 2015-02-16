@@ -35,13 +35,34 @@ textarea {
 .wpcf7 textarea {
 	font-size: 1.2em;
 	font-weight: 100;
-    background-color: $color_bg_3;
+    background-color: $color_text_2;
     border: none;
-    width: 100%;
-    color: $color_text_2;
+    color: $color_text_1;
     border-radius: 4px;
 }
+
+.wpcf7 textarea {
+	max-height: 150px;
+	width: 86%;
+	@media (max-width: 768px) {
+		width: 90%;
+	}
+}
+
 .wpcf7 .button_ghost_wide {
     margin-top: .5em;
     }
 
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"] {
+	width: 90%;
+}
+
+.inline {
+	display: inline-block;
+	width: 45%;
+	@media (max-width: 768px) {
+		display: block;
+		width: 100%;
+	}
+}

@@ -22,9 +22,12 @@ get_header(); ?>
 	<div class="row">
 		<div class="col-xs-12 col-sm-8">
 		<div class="post_header">
-        	<h1><?php the_title(); ?></h1>
+        	<a href="<?php echo get_permalink(); ?>">
+        		<h1><?php the_title(); ?></h1>
+        	</a>
       	</div>
 			<?php get_template_part( 'content', 'single' ); ?>
+			<?php if(is_single()) comments_template(); ?>
 		</div>
 		<div class="col-xs-12 col-xs-4">
 			<?php get_sidebar(); ?>

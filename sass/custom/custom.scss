@@ -13,12 +13,13 @@
 		font-weight: 200;
 	}
 	i {
-		padding-left: 3em;
-		padding-top: 1em;
+		text-align: center;
+		display: block;
+		padding-top: 2em;
 	}
 	@media (max-width: 768px) {
 		h1 {
-			font-size: 3.2em;
+			font-size: 2.5em;
 			padding-top: 1em;
 		}
 		h5 {
@@ -51,8 +52,11 @@
 	width: 100%;
 	height: 400px;
 	text-align: center;
-	background-color: $color_logo_4;
+	background-color: $color_logo_3;
 	padding: 8.5em 0;
+	@media (max-width: 768px) {
+		padding: 6em 0;
+	}
 }
 
 .fixed_bg_home {
@@ -60,8 +64,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fff;
+  background-attachment: fixed;
   min-height: 700px;
 }
+
+
 
 /**BLOG AREA*/
 .blog_area {
@@ -79,123 +86,151 @@
   font-family: $font_text;
   font-weight: 100;
   }
-  h3 {
-  	color: #fff;
-  	font-weight: 200;
+  h1 {
+  	margin-top: 2em;
+  	font-family: $font_bold;
+  	font-weight: 300;
+  	font-size: 4em;
   	text-align: center;
+  	@media (max-width: 768px) {
+		font-size: 3em;
+  	}
   }
-  h3:hover {
-  	color: $color_logo_1;
-  	-webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	-ms-transition: all .5s;
-	-o-transition: all .5s;
-	transition: all .5s;  
-  }
+
   .container-fluid,
-  .row,
-   {
+  .row,	{
     margin: 0;
     padding: 0;
   }
-  .custom_column_third {
+}
+  .custom_column_whole {
     position: relative;
     min-height: 100px;
     float: left;
     padding: 0;
     margin: 0;
-    width: 33.33333%;
-    @media screen and (max-width: 640px) {
-      width: 100%;
-      margin-bottom: 1em;
-    }
-  }
+    width: 100%;
 }
+
 
 .black_background_top {
   cursor: pointer;
   width: 100%;
-  background-color: rgba(0,0,0,.6);
-  height: 80px;
+  background-color: rgba(0,0,0,0);
+  height: 100%;
   padding: 5px;
-  p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  h4 {
-    text-align: center;
-  }
-  a {
-    color: $color_bg_4;
-    font-weight: 100;
-  }
+  color: $color_text_2;
 }
 
 .black_background_top:hover,
 .black_background_top:active {
-  background-color: rgba(0,0,0,.8);
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -ms-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;   
+	color: $color_logo_1;
+ 	background-color: rgba(0,0,0,.6);
+ 	-webkit-transition: all .5s;
+ 	-moz-transition: all .5s;
+ 	-ms-transition: all .5s;
+ 	-o-transition: all .5s;
+ 	transition: all .5s;   
 }
 
 .black_background {
   cursor: pointer;
   width: 100%;
-  background-color: rgba(0,0,0,.6);
-  height: 50px;
+  background-color: $color_bg_4;
+  min-height: 180px;
   padding: 5px;
-  p {
+  h3 {
     text-align: center;
     padding: 0 3em;
-    color: #fff;
+    color: $color_logo_1;
     margin: 0;
-    padding-top: 8px;
+    padding: 1.6em;
   }
 }
 
 .black_background:hover,
 .black_background:active {
-  background-color: rgba(0,0,0,.8);
+  background-color: $color_logo_4;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   -ms-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;   
-  p {
-    color: $color_logo_1;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -ms-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;  
-  }
-}
-
-.bottom {
-  position: absolute;
-  bottom: 0px;
+	h3 {
+    color: #000;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;  
+ 	}
 }
 
 .brunch_blog_post {
   width: 100%;
   height: 380px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  background-attachment: fixed;
 }
 
 /*about area*/
 #about {
-	padding-top: 8em;
+	padding: 4em 0;
 	h1 {
+		padding: .5em 0;
 		font-family: $font_bold;
 	}
+	p {
+		text-align: left;
+		max-width: 700px;
+		padding: .4em;
+		margin: 2em auto;
+		font-weight: 300;
+		font-size: 1.2em;
+		color: $color_text_1;
+	}
+}
+
+#contact {
+	padding: 6em 0;
+	background-repeat: auto;
+}
+
+.contact_box {
+	border: 1px solid $color_logo_1;
+	width: 100%;
+	margin: 2em auto;
+	padding: 1em;
+	background-color: $color_bg_1;
+	@media (max-width: 768px) {
+		margin: 0;
+	}
+	h3 {
+		margin: .5em 0;
+	}
+}
+
+
+/*=widgets and comments*/
+.tagcloud {
+	padding: 1em;
+}
+
+.comments-title {
+	font-size: 2em;
+	padding-bottom: .5em;
+}
+
+.comment-content {
+	color: $color_logo_3;
 }
 
 /*single post*/
 .brunch_post {
-	padding: 8em 0 3em 0;
+	padding: 6em 0 1em 0;
 }
 
 .post_header {
@@ -222,5 +257,3 @@
 	color: $color_logo_1;
 	font-weight: 200;
 }
-
-

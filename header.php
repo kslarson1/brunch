@@ -21,24 +21,25 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php include_once("analyticstracking.php") ?>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'brunch' ); ?></a>
 
 	<!-- start of nav -->
 <nav id="site-navigation" class="main-navigation" role="navigation">
 
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="col-xs-2">
 			<div class="image_logo" style="background-image: url(<?php the_field('header_logo'); ?>);"></div>
 		</div>
 	<div class="col-xs-10">
 <ul id="menu">
-	<li><a href="/brunch">Home</a></li>
-    <li><a href="/brunch/brunch_review">Most Recent Brunches</a></li>
+	<li><a href="/home">Home</a></li>
+    <li><a href="/brunch_review">Blog</a></li>
 </ul>
-</div>
-</div>
+	</div>
+	</div>
 </div>
 
 </nav>
@@ -51,4 +52,4 @@
 
 <!-- end of nav -->
 
-	<div id="content" class="site-content">
+<div id="content" class="site-content">

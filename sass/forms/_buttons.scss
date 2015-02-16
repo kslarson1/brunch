@@ -30,12 +30,13 @@
 .button_ghost_wide {
 	display: block;
 	width: 80%;
+	max-width: 400px;
 	height: 50px;
 	font-weight: 400;
 	margin: .5em auto;
 	padding: 8px;
 	text-align: center;
-	color: $color_logo_2;
+	color: $color_text_1;
 	background-color: $color_button_1;
 	font-size: 1.3em;
 	border: 2px solid $color_logo_1;
