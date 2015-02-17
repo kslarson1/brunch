@@ -59,18 +59,37 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 
   <!-- LOOP CONTENT BEGINS-->
-  <div class="custom_column_whole">
-  <a href="<?php echo get_permalink(); ?>">
-  <div class="brunch_blog_post" style="background-image: url(<?php the_field('small_display_image'); ?>);">
-    <div class="black_background_top">
-      <h1><?php the_title(); ?></h1>
-    </div>
-  </div>
-  <div class="black_background bottom">
-      <h3><?php the_field('small_display_teaser'); ?></h3>
-  </div>
-  </a>
-  </div>
+<a href="<?php echo get_permalink(); ?>">
+<div class="container-fluid">
+ 	<div class="row">
+    <div class="bg_left">
+		<div class="container-fluid">
+			
+					<h2 class="center"><?php the_field('brunch_name'); ?></h2>
+						<iframe width="100%" height="280" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ca/maps?center=<?php the_field('brunch_map'); ?>&q=<?php the_field('brunch_map'); ?>&zoom=6&size=300x300&output=embed&iwloc=near"></iframe><br /> <!-- =Google maps-->
+				
+		</div>	
+   	</div>
+   		<div class="bg_right" style="background-image: url(<?php the_field('small_display_image'); ?>);">
+  			<div class="black_background_top">
+  			</div>
+  		</div>
+  	</div>
+</div>
+<div class="container-fluid">
+	<div class="row">
+  		<div class="bottom">
+      		<h3><?php the_field('small_display_teaser'); ?></h3>
+  		</div>
+  	</div>
+</div>
+</a>
+ 
+
+<!-- <div class="black_background_top"> -->
+      <!-- <h1><?php the_title(); ?></h1> -->
+    <!-- </div> -->
+
 
 <?php endwhile; ?>
 <!-- END OF CUSTOM POST FOR BLOG -->
